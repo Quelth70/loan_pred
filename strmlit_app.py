@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
 
 st.title("Loaning Eligibility Prediction")
 
