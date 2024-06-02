@@ -51,8 +51,6 @@ else:
 
 feeding = np.array([values])
 
-uploaded_file = st.file_uploader("Choose a model file.", type = "pkl")
-
 def load_model():
   with open("model.pkl", "rb") as file:
     model = pickle.load(file)
