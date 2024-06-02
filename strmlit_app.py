@@ -48,7 +48,7 @@ elif prop_area == "Semiurban":
 else:
     values.extend([0, 1])
 
-feeding = np.array([values]).reshape(1,-1)
+feeding = np.array([values])
 
 @st.cache(allow_output_mutation=True)
 def load_model():
