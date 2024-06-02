@@ -62,6 +62,6 @@ if st.sidebar.button("Predict"):
     y_pred = model.predict(feeding)
     st.write(f"The probability that this person will pay is: {model.predict_proba(feeding)[0,1]}")
     if y_pred[0] == 1:
-        st.write(f"This person is eligible for a loan.")
+        st.write("This person is eligible for a loan.")
     else:
-        st.write(f"This person is not eligible for a loan.")
+        st.write("This person is not eligible for a loan.")
