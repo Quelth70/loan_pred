@@ -48,7 +48,7 @@ elif prop_area == "Semiurban":
 else:
     values.extend([0, 1])
 
-feeding = np.array([values])
+feeding = np.array(values).reshape(1, -1)
 
 def load_model():
     with open('model.pkl', 'rb') as file:
