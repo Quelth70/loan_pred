@@ -52,9 +52,15 @@ feeding = np.array([values])
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    with open("model.pkl", "rb") as file:
-        model = pickle.load(file)
-    return model
+    try:
+        with open('model.pkl', 'rb') as file:
+            model = pickle.load(file)
+        return model
+    except FileNotFoundError:
+        st.error("Model file 'model.pkl' not found. Please ensure it is in the correct directory.")
+    except Exception as e:
+        st.error(f"An error occurred while loading the model: {e}")
+    return None
 
 model = load_model()
 if st.sidebar.button("Predict"):
