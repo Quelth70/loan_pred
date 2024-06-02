@@ -50,7 +50,6 @@ else:
 
 feeding = np.array([values])
 
-@st.cache(allow_output_mutation=True)
 def load_model():
     with open('model.pkl', 'rb') as file:
         model = pickle.load(file)
