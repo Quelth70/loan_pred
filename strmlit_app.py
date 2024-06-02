@@ -52,9 +52,9 @@ else:
 feeding = np.array([values])
 
 def load_model():
-  with open("model.pkl", "rb") as file:
-    model = pickle.load(file)
-  return model
+    with open("model.pkl", "rb") as file:
+        model = pickle.load(file)
+    return model
 
 model = load_model()
 if st.sidebar.button("Predict"):
