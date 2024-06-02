@@ -56,7 +56,7 @@ def load_model():
     model = pickle.load(file)
   return model
 
-model = pickle.load(uploaded_file)
+model = load_model()
 if st.sidebar.button("Predict"):
     y_pred = model.predict(feeding)
     st.write(f"The probability that this person will pay is: {model.predict_proba(feeding)[0,1]}")
